@@ -24,6 +24,8 @@ const buy_low_sell_high = (lst) => {
     } else {
       l_pointer = r_pointer;
     }
+
+    r_pointer += 1;
   }
 
   return maxProfit;
