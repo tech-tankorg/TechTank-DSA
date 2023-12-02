@@ -16,14 +16,18 @@ const is_palindrome = (input_str) => {
   let l_pointer = 0;
   let r_pointer = processed_str.length - 1;
 
-  while (l_pointer !== r_pointer) {
+  while (l_pointer !== r_pointer && l_pointer < r_pointer) {
     if (processed_str[l_pointer] !== processed_str[r_pointer]) return false;
 
     l_pointer += 1;
-    r_pointer += 1;
-
-    return true;
+    r_pointer -= 1;
   }
+
+  return true;
 };
 
 console.log(is_palindrome("A man, a plan, a canal: Panama"));
+
+module.exports = {
+  is_palindrome
+}
